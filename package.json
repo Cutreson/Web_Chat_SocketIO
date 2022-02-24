@@ -1,0 +1,24 @@
+{
+  "name": "web_socket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cutreson/Web_Chat_SocketIO.git"
+  },
+  "author": "Cutreson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cutreson/Web_Chat_SocketIO/issues"
+  },
+  "homepage": "https://github.com/Cutreson/Web_Chat_SocketIO#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  }
+}
