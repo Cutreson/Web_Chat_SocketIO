@@ -1,41 +1,56 @@
-body{
+body {
     background-color: rgb(235, 235, 224);
 }
-#wrapper{
+
+#wrapper {
     width: 600px;
     margin: auto;
 }
-#txtUsername{
+
+#txtUsername {
     background-color: transparent;
     border: solid 1px black;
 }
-#left{
+
+#left {
     min-height: 300px;
     width: 30%;
     float: left;
     background-color: rgb(240, 240, 161);
 }
-#right{
+
+#right {
     min-height: 300px;
     width: 70%;
     float: right;
     background-color: rgb(129, 218, 218);
 }
-#boxTitle{
+
+#boxTitle {
     border: solid 1px black;
     padding: 5px;
     text-align: center;
     font-weight: bold;
 }
-#boxContent{
+
+#boxContent {
     border: solid 1px black;
     border-top: none;
     padding: 5px;
     text-align: center;
 }
-#sayHi{
+
+#sayHi {
     text-align: right;
 }
-#listMessages{
+
+#listMessages {
     height: 300px;
+    background-color: rgb(120, 209, 117);
+    margin-bottom: 15px;
+}
+
+#txtMessage {
+    background-color: transparent;
+    border: solid 1px black;
 }
