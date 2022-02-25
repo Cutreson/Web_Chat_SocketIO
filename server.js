@@ -25,12 +25,14 @@ io.on("connection", function(socket){
             socket.Username = data;
             socket.emit("server-send-register-ok", data);
             io.sockets.emit("server-send-listUser",listUser);
+            console.log(data + " đã đăng nhập !");
         }
     });
 
     socket.on("logout", function(){
         listUser.splice(listUser.indexOf(socket.Username), 1);
         socket.broadcast.emit("server-send-listUser",listUser);
+        console.log(socket.Username + " đã thoát !");
     });
 
     socket.on("user-send-Message", function(data){
@@ -40,6 +42,7 @@ io.on("connection", function(socket){
     socket.on("disconnect", function(){
         listUser.splice(listUser.indexOf(socket.Username), 1);
         socket.broadcast.emit("server-send-listUser",listUser);
+        console.log(socket.Username + " đã thoát !");
     });
 });
 
