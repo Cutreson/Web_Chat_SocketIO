@@ -1,4 +1,4 @@
-var socket = io("http://localhost:3000")
+var socket = io("https://cutreson-web-socket.herokuapp.com/")
 
 socket.on("server-send-register-error", function(){
     alert("User name da ton tai...");
