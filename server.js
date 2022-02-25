@@ -13,7 +13,6 @@ server.listen(PORT);
 var listUser = [];
 
 io.on("connection", function(socket){
-    console.log(socket.id + " da ket noi...");
 
     socket.on("client-send-Username", function(data){
         if(listUser.indexOf(data) >=0){
@@ -35,8 +34,12 @@ io.on("connection", function(socket){
     });
 
     socket.on("user-send-Message", function(data){
-        console.log(data);
         io.sockets.emit("server-send-Message", {un:socket.Username, nd:data});
+    });
+
+    socket.on("disconnect", function(){
+        listUser.splice(listUser.indexOf(socket.Username), 1);
+        socket.broadcast.emit("server-send-listUser",listUser);
     });
 });
 
